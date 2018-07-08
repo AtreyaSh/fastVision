@@ -1,6 +1,6 @@
-# Tesseract OCR text recognition
+# Tesseract Optical Character Recognition (OCR) algorithm
 
-Here we test some examples of the Tesseract OCR text recognition algorithm.
+Here we test some examples of the Tesseract OCR algorithm.
 
 This project aims to increase efficiencies of administrative processes by applying the OCR algorithm to images.
 
