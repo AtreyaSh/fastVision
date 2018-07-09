@@ -17,6 +17,7 @@ int main()
     api->Init(NULL, "eng");
     api->SetImage(image);
     // specify bounding rectangle to reduce search space
+    // format (top left x coord, top left y coord, width, height)
     api->SetRectangle(50, 28, 525, 120);
 
     // get OCR result
