@@ -16,10 +16,10 @@ int main (int argc, char **arv)
     selectROIs("Image", im, rects, fromCenter);
      
     // Crop image
-    Mat imCrop = im(r);
+    // Mat imCrop = im(r);
      
     // Display Cropped Image
-    imshow("Image", imCrop);
+    // imshow("Image", imCrop);
     waitKey(0);
      
     return 0;
