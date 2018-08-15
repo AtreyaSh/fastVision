@@ -62,4 +62,4 @@ The Tesseract OCR algorithm will parse the image into text and output it into th
 
 ## Credits
 
-Tesseract for the main OCR: https://github.com/tesseract-ocr/tesseract
+Tesseract for OCR algorithm: https://github.com/tesseract-ocr/tesseract
