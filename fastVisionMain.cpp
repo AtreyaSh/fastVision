@@ -11,7 +11,7 @@ int main()
 
     // open input image with leptonica library, no path needed as image is in base directory
     // here we can also explore converting pdfs to images
-    Pix *image = pixRead("test.png");
+    Pix *image = pixRead("./data/test.png");
 
     // initialize tesseract-ocr with English
     api->Init(NULL, "eng");
