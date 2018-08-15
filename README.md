@@ -16,7 +16,7 @@ The main test image is located in the `/data` directory and is named `test.png`.
 
 3. Compile `bBox.cpp` script using `g++`
 
-   `$ g++ -std=c++11 bBox.cpp `pkg-config --libs --cflags opencv` -o bBox.exe`
+   ``$ g++ -std=c++11 bBox.cpp `pkg-config --libs --cflags opencv` -o bBox.exe``
 
 4. Run the compiled file.
 
@@ -62,4 +62,4 @@ The Tesseract OCR algorithm will parse the image into text and output it into th
 
 ## Credits
 
-Tesseract for the main OCR: https://github.com/tesseract-ocr/tesseract
+Tesseract for OCR algorithm: https://github.com/tesseract-ocr/tesseract
