@@ -4,7 +4,7 @@ This project aims to increase efficiencies of administrative processes by applyi
 
 The main test image is located in the `/data` directory and is named `test.png`. You can replace this image with another `.png` image  and rename it to `test.png` if you want a quick test without having to modify code.
 
-# 1. Guide to implement `bBox.cpp` in Ubuntu 16.04
+## 1. Guide to implement `bBox.cpp` in Ubuntu 16.04
 
 `bBox.cpp` allows a user to interactively select Regions of Interest (ROIs) or bounding boxes, which can then later be used within `fastVisionMain.cpp`.
 
@@ -24,7 +24,7 @@ The main test image is located in the `/data` directory and is named `test.png`.
 
 The script will allow you to select ROIs and will save their dimensions into a `.csv` file in the `/results` directory.
 
-# 2. Guide to implement `fastVisionMain.cpp` in Ubuntu 16.04
+## 2. Guide to implement `fastVisionMain.cpp` in Ubuntu 16.04
 
 `fastVisionMain.cpp` helps one to parse ROIs in images for text. Below are instructions to implement the script.
 
@@ -48,7 +48,7 @@ The script will allow you to select ROIs and will save their dimensions into a `
 
 The Tesseract OCR algorithm will parse the image into text and output it into the console.
 
-# Developments
+## Developments
 
 1. Provide user-interactivity in choosing bounding boxes for optimized text-recognition
 
@@ -60,6 +60,6 @@ The Tesseract OCR algorithm will parse the image into text and output it into th
 
 5. Bind all functions within a R-framework to process larger data-flows
 
-# Credits
+## Credits
 
 Tesseract for the main OCR: https://github.com/tesseract-ocr/tesseract
