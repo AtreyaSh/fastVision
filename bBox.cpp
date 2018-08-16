@@ -1,21 +1,21 @@
 #include <opencv2/opencv.hpp>
-// selectROI is part of tracking API
 #include <opencv2/tracking.hpp>
-#include <fstream>
-#include <vector>
-#include <iterator>
+#include "writeCsv.h"
 
 using namespace std;
 using namespace cv;
 
 int main (int argc, char **arv)
 {
-    // Read image
     Mat im = imread("./data/test.png");
     string input = "yes";
     vector<Rect2d> rects;
-    vector<int> myV;
+    vector<double> myV;
+    vector<string> header = {"x", "y", "width", "height"};
+    string path;
     int j = 0;
+    int oX = im.cols;
+    int oY = im.rows;
 
     while(input == "yes"){
       // figure out how to clear memory on each iteration
@@ -44,31 +44,15 @@ int main (int argc, char **arv)
       j++;
     }
 
+    // edit these to fit with invariance idea
     for(int i = 0; i < rects.size(); i++){
-      myV.push_back(rects[i].x);
-      myV.push_back(rects[i].y);
-      myV.push_back(rects[i].height);
-      myV.push_back(rects[i].width);
+      myV.push_back(rects[i].x/oX);
+      myV.push_back(rects[i].y/oY);
+      myV.push_back(rects[i].width/oX);
+      myV.push_back(rects[i].height/oY);
     }
 
-    ofstream myfile("./results/results.csv");
-    int vsize = myV.size();
-
-    myfile << "x" << ",";
-    myfile << "y" << ",";
-    myfile << "height" << ",";
-    myfile << "width" << "\r";
-
-    for(int n = 0; n < vsize; n++){
-      if((n+1)%4 != 0)
-      {
-          myfile << myV[n] << ',';
-      }
-      else
-      {
-        myfile << myV[n] << '\r';
-      }
-    }
+    writeCsv_h::writeCsv(path = "./results/results.csv", myV, header);
 
     // this could then later be imported for use with tesseract
     // clear memory of myV at the end and delete all data
