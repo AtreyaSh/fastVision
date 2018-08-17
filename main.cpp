@@ -7,7 +7,7 @@ using namespace cv;
 
 int main (int argc, char **arv)
 {
-    Mat im = imread("./data/test.png");
+    Mat im = imread("./dataC/test.png");
     string input = "yes";
     vector<Rect2d> rects;
     vector<double> myV;
@@ -18,8 +18,6 @@ int main (int argc, char **arv)
     int oY = im.rows;
 
     while(input == "yes"){
-      // figure out how to clear memory on each iteration
-      // issue with new window always being behind others
 
       if(j > 0){
         rectangle(im, rects[j-1], Scalar(255,0,0), 1.5, 8, 0);
@@ -44,7 +42,6 @@ int main (int argc, char **arv)
       j++;
     }
 
-    // edit these to fit with invariance idea
     for(int i = 0; i < rects.size(); i++){
       myV.push_back(rects[i].x/oX);
       myV.push_back(rects[i].y/oY);
@@ -54,8 +51,6 @@ int main (int argc, char **arv)
 
     writeCsv_h::writeCsv(path = "./results/results.csv", myV, header);
 
-    // this could then later be imported for use with tesseract
-    // clear memory of myV at the end and delete all data
     im.release();
     waitKey(0);
     return 0;
