@@ -26,6 +26,6 @@ The script will allow you to select ROIs and will save their dimensions into the
 
 3. Run some examples using R to show aspect-ratio invariance
 
-# Credits
+## Credits
 
 Tesseract OCR: https://github.com/tesseract-ocr/tesseract
