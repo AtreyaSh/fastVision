@@ -40,7 +40,7 @@ Note: Step 3 can be a long and tedious process
 
 ## Run Application
 
-Once the dependencies have been installled, we can run our application. Normally, we would need to compile our scripts and run them manually. Here, we provide a compact executable file `run.sh` to handle this process. Simply do as follows:
+Once the dependencies have been installed, we can run our application. Normally, we would need to compile our scripts and run them manually. Here, we provide a compact executable file `run.sh` to handle this process. Simply do as follows:
 
    `$ ./run.sh`
 
