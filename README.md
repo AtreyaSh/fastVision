@@ -76,3 +76,5 @@ Tesseract OCR: https://github.com/tesseract-ocr/tesseract
 
 @xczhang in StackOverFlow discussion for input on openCV window hiding issue:
 https://stackoverflow.com/questions/8417531/opencv-how-to-force-the-image-window-to-appear-on-top-of-other-windows
+
+@schicking for openCV Dockerfile template: https://github.com/schickling/dockerfiles
