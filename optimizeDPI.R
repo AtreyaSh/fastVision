@@ -17,7 +17,6 @@ source("./aux/randString.R", encoding = "UTF-8")
 optimizeDPI <- function(pdfPath, dimPath, dpiStart = 72, dpiInc = 10){
   
   ### check dependencies ###
-  
   if(!file.exists(pdfPath)){
     stop(paste0(pdfPath, " does not exist"))
   }
@@ -35,7 +34,6 @@ optimizeDPI <- function(pdfPath, dimPath, dpiStart = 72, dpiInc = 10){
   }
   
   ### define variables ###
-  
   check <- FALSE
   dpi = dpiStart
   dimR <- read.csv(dimPath, stringsAsFactors = FALSE)[,c(3,4,1,2)]
@@ -43,7 +41,6 @@ optimizeDPI <- function(pdfPath, dimPath, dpiStart = 72, dpiInc = 10){
   against <- lapply(1:nrow(dimR), function(x) randString(10))
   
   ### iterations ###
-  
   while(check == FALSE){
     pdf_convert(pdfPath, filenames = "./dataR/next.png", dpi = dpi)
     im <- image_read("./dataR/next.png")
