@@ -57,7 +57,7 @@ optimizeDPI <- function(pdfPath, dimPath, dpiStart = 72, dpiInc = 10){
     
     if(check == FALSE){
       against <- test
-      dpi = dpi + 10
+      dpi = dpi + dpiInc
       file.remove("./dataR/next.png")
     }
   }
