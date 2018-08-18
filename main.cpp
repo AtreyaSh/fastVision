@@ -41,14 +41,12 @@ int main (int argc, char **arv)
       }
 
       cvDestroyWindow("Image");
-
       input = "init";
 
       while(input != "yes" & input != "no"){
         cout << "Do you want to select another ROI? (yes|no): ";
         cin >> input;
       }
-
       j++;
     }
 
