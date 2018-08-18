@@ -60,7 +60,7 @@ Once the dependencies have been installed, we can run our application.
 
    `$ Rscript src.R`
 
-   This optimized DPI will be saved as `/results/dpi.csv`.
+   The optimized DPI will be saved as `/results/dpi.csv`.
 
 ## Docker Implementation
 
