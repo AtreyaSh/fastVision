@@ -7,6 +7,7 @@ using namespace cv;
 
 int main (int argc, char **arv)
 {
+    // define variables
     Mat im = imread("./dataC/test.png");
     string input = "yes";
     vector<Rect2d> rects;
@@ -17,9 +18,11 @@ int main (int argc, char **arv)
     int oX = im.cols;
     int oY = im.rows;
 
+    // iterative while loop
     while(input == "yes"){
 
       if(j > 0){
+        // redefine image and remove window problem
         rectangle(im, rects[j-1], Scalar(255,0,0), 1.5, 8, 0);
         namedWindow("GetFocus", CV_WINDOW_NORMAL);
         Mat img = cv::Mat::zeros(100, 100, CV_8UC3);
@@ -49,6 +52,7 @@ int main (int argc, char **arv)
       j++;
     }
 
+    // collate results and divide for aspect-ratio invariance
     for(int i = 0; i < rects.size(); i++){
       myV.push_back(rects[i].x/oX);
       myV.push_back(rects[i].y/oY);
@@ -56,6 +60,7 @@ int main (int argc, char **arv)
       myV.push_back(rects[i].height/oY);
     }
 
+    // write myV results
     writeCsv_h::writeCsv(path = "./results/results.csv", myV, header);
 
     im.release();
