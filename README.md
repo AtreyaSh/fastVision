@@ -34,7 +34,7 @@ Note: Step 3 can be a long and tedious process
 
 Once the dependencies have been installled, we can run our application. Normally, we would need to compile our scripts and run them manually. Here, we provide a compact executable file `run.sh` to handle this process. Simply do as follows:
 
-   `$ ./cmp.sh`
+   `$ ./run.sh`
 
 The script will allow you to select ROIs and will save their aspect-ratio invariant dimensions as `/results/results.csv`. This optimized DPI will be written as `/results/dpi.csv`.
 
