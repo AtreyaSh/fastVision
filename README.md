@@ -36,7 +36,7 @@ Once the dependencies have been installled, we can run our application. Normally
 
    `$ ./run.sh`
 
-The script will allow you to select ROIs and will save their aspect-ratio invariant dimensions as `/results/results.csv`. This optimized DPI will be written as `/results/dpi.csv`.
+Selected ROIs with aspect-ratio invariant dimensions will be saved as `/results/results.csv`. This optimized DPI will be saved as `/results/dpi.csv`.
 
 ## Docker Implementation
 
