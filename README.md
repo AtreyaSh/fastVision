@@ -42,11 +42,25 @@ The main test PDF file is `/dataC/test.pdf`. The corresponding image file used f
 
 ## Run Application
 
-Once the dependencies have been installed, we can run our application. Normally, we would need to compile our scripts and run them manually. Here, we provide a compact executable file `run.sh` to handle this process. Simply do as follows:
+Once the dependencies have been installed, we can run our application. 
+
+1. Clone our repository and navigate to its main directory:
+
+   `$ git clone https://github.com/AtreyaSh/fastVision`
+   
+   `$ cd fastVision`
+
+2. Normally, we would need to compile our scripts and run them manually. Here, we provide a compact executable file `run.sh` to handle this process. Simply do as follows:
 
    `$ ./run.sh`
 
-Selected ROIs with aspect-ratio invariant dimensions will be saved as `/results/results.csv`. This optimized DPI will be saved as `/results/dpi.csv`.
+This will allow you to analyze your image and select relevant ROIs. Selected ROIs with aspect-ratio invariant dimensions will be saved as `/results/results.csv`. 
+
+3. To optimize the DPI for the Tesseract OCR algorithm, run the following:
+
+   `$ Rscript src.R`
+
+This optimized DPI will be saved as `/results/dpi.csv`.
 
 ## Docker Implementation
 
