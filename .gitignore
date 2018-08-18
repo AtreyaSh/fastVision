@@ -30,3 +30,5 @@ sites
 *.exe
 *.out
 *.appe
+
+.Rhistory
