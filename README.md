@@ -19,24 +19,48 @@ The main test PDF file is `/dataC/test.pdf`. The corresponding image file used f
 1. As our code requires c++ compilation, we would need a c++ compiler installed. In this example, we recommend `g++`.
 
    `$ sudo apt-get install g++`
+   
+2. We require `R` to be installed on your system:
 
-2. In order to run the Tesseract OCR algorithm, we need to install `tesseract-ocr` and `libtesseract-dev`.
+   `$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9`
+   
+   `$ sudo add-apt-repository 'deb [arch=amd64,i386] https://cran.rstudio.com/bin/linux/ubuntu xenial/'`
+   
+   `$ sudo apt-get update && sudo apt-get install r-base`
+   
+   Note: Additional installations might be necessary depending on dependencies within R
+
+3. In order to run the Tesseract OCR algorithm, we need to install `tesseract-ocr` and `libtesseract-dev`.
 
    `$ sudo apt-get install tesseract-ocr libtesseract-dev`
 
-3. In order to run ROI selection processes, we need to install `openCV` onto our system. A comprehensive guide can be found here:
+4. In order to run ROI selection processes, we need to install `openCV` onto our system. A comprehensive guide can be found here:
 
    https://www.learnopencv.com/install-opencv3-on-ubuntu/
-
-Note: Step 3 can be a long and tedious process
+   
+   Note: This step can be long and tedious
 
 ## Run Application
 
-Once the dependencies have been installled, we can run our application. Normally, we would need to compile our scripts and run them manually. Here, we provide a compact executable file `run.sh` to handle this process. Simply do as follows:
+Once the dependencies have been installed, we can run our application. 
+
+1. Clone our repository and navigate to its main directory:
+
+   `$ git clone https://github.com/AtreyaSh/fastVision`
+   
+   `$ cd fastVision`
+
+2. Normally, we would need to compile our scripts and run them manually. Here, we provide a compact executable file `run.sh` to handle this process. Simply do as follows:
 
    `$ ./run.sh`
 
-Selected ROIs with aspect-ratio invariant dimensions will be saved as `/results/results.csv`. This optimized DPI will be saved as `/results/dpi.csv`.
+   This will allow you to analyze your image and select relevant ROIs. Selected ROIs with aspect-ratio invariant dimensions will be saved as `/results/results.csv`. 
+
+3. To optimize the DPI for the Tesseract OCR algorithm, run the following:
+
+   `$ Rscript src.R`
+
+   The optimized DPI will be saved as `/results/dpi.csv`.
 
 ## Docker Implementation
 
