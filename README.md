@@ -44,8 +44,8 @@ Selected ROIs with aspect-ratio invariant dimensions will be saved as `/results/
 
 ## Credits
 
-1. Tesseract OCR: https://github.com/tesseract-ocr/tesseract
+Tesseract OCR: https://github.com/tesseract-ocr/tesseract
 
-2. @xczhang in StackOverFlow discussion for input on openCV window hiding issue:
+@xczhang in StackOverFlow discussion for input on openCV window hiding issue:
 
-   https://stackoverflow.com/questions/8417531/opencv-how-to-force-the-image-window-to-appear-on-top-of-other-windows
+https://stackoverflow.com/questions/8417531/opencv-how-to-force-the-image-window-to-appear-on-top-of-other-windows
