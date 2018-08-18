@@ -60,6 +60,8 @@ Once the dependencies have been installed, we can run our application.
 
    `$ Rscript src.R`
 
+   While running this script, there could be additional dependencies required to install R packages. This would be shown directly in the console and clear instructions would be given on how to install the necessary corresponding aptitude packages.
+   
    The optimized DPI will be saved as `/results/dpi.csv`.
 
 ## Docker Implementation
