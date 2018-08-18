@@ -54,13 +54,13 @@ Once the dependencies have been installed, we can run our application.
 
    `$ ./run.sh`
 
-This will allow you to analyze your image and select relevant ROIs. Selected ROIs with aspect-ratio invariant dimensions will be saved as `/results/results.csv`. 
+   This will allow you to analyze your image and select relevant ROIs. Selected ROIs with aspect-ratio invariant dimensions will be saved as `/results/results.csv`. 
 
 3. To optimize the DPI for the Tesseract OCR algorithm, run the following:
 
    `$ Rscript src.R`
 
-This optimized DPI will be saved as `/results/dpi.csv`.
+   This optimized DPI will be saved as `/results/dpi.csv`.
 
 ## Docker Implementation
 
