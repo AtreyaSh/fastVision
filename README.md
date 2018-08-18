@@ -27,8 +27,6 @@ The main test PDF file is `/dataC/test.pdf`. The corresponding image file used f
    `$ sudo add-apt-repository 'deb [arch=amd64,i386] https://cran.rstudio.com/bin/linux/ubuntu xenial/'`
    
    `$ sudo apt-get update && sudo apt-get install r-base`
-   
-   Note: Additional installations might be necessary depending on dependencies within R
 
 3. In order to run the Tesseract OCR algorithm, we need to install `tesseract-ocr` and `libtesseract-dev`.
 
@@ -60,6 +58,8 @@ Once the dependencies have been installed, we can run our application.
 
    `$ Rscript src.R`
 
+   While running this script, there could be additional dependencies required to install R packages. This would be shown directly in the console and clear instructions would be given on how to install the necessary corresponding aptitude packages.
+   
    The optimized DPI will be saved as `/results/dpi.csv`.
 
 ## Docker Implementation
@@ -71,5 +71,4 @@ Once the dependencies have been installed, we can run our application.
 Tesseract OCR: https://github.com/tesseract-ocr/tesseract
 
 @xczhang in StackOverFlow discussion for input on openCV window hiding issue:
-
 https://stackoverflow.com/questions/8417531/opencv-how-to-force-the-image-window-to-appear-on-top-of-other-windows
