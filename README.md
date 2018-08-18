@@ -27,8 +27,6 @@ The main test PDF file is `/dataC/test.pdf`. The corresponding image file used f
    `$ sudo add-apt-repository 'deb [arch=amd64,i386] https://cran.rstudio.com/bin/linux/ubuntu xenial/'`
    
    `$ sudo apt-get update && sudo apt-get install r-base`
-   
-   Note: Additional installations might be necessary depending on dependencies within R
 
 3. In order to run the Tesseract OCR algorithm, we need to install `tesseract-ocr` and `libtesseract-dev`.
 
