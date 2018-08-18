@@ -1,7 +1,7 @@
 #!/bin/bash
 
-d=$(find *.cpp) &&
-g++ -std=c++11 $(echo $d) `pkg-config --libs --cflags opencv` -o exe.sh &&
-./exe.sh &&
-sleep 0.1 &&
-rm exe.sh 
+d=$(find *.cpp) \
+&& g++ -std=c++11 $(echo $d) `pkg-config --libs --cflags opencv` -o exe.sh \
+&& ./exe.sh \
+&& sleep 0.1 \
+rm exe.sh
