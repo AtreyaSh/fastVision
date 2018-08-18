@@ -19,12 +19,20 @@ The main test PDF file is `/dataC/test.pdf`. The corresponding image file used f
 1. As our code requires c++ compilation, we would need a c++ compiler installed. In this example, we recommend `g++`.
 
    `$ sudo apt-get install g++`
+   
+2. We require `R` to be installed on your system:
 
-2. In order to run the Tesseract OCR algorithm, we need to install `tesseract-ocr` and `libtesseract-dev`.
+   `$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9`
+   
+   `$ sudo add-apt-repository 'deb [arch=amd64,i386] https://cran.rstudio.com/bin/linux/ubuntu xenial/'`
+   
+   `$ sudo apt-get update && sudo apt-get install r-base`
+
+3. In order to run the Tesseract OCR algorithm, we need to install `tesseract-ocr` and `libtesseract-dev`.
 
    `$ sudo apt-get install tesseract-ocr libtesseract-dev`
 
-3. In order to run ROI selection processes, we need to install `openCV` onto our system. A comprehensive guide can be found here:
+4. In order to run ROI selection processes, we need to install `openCV` onto our system. A comprehensive guide can be found here:
 
    https://www.learnopencv.com/install-opencv3-on-ubuntu/
 
