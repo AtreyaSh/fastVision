@@ -21,6 +21,13 @@ int main (int argc, char **arv)
 
       if(j > 0){
         rectangle(im, rects[j-1], Scalar(255,0,0), 1.5, 8, 0);
+        namedWindow("GetFocus", CV_WINDOW_NORMAL);
+        Mat img = cv::Mat::zeros(100, 100, CV_8UC3);
+        imshow("GetFocus", img);
+        setWindowProperty("GetFocus", CV_WND_PROP_FULLSCREEN, CV_WINDOW_FULLSCREEN);
+        waitKey(1);
+        setWindowProperty("GetFocus", CV_WND_PROP_FULLSCREEN, CV_WINDOW_NORMAL);
+        destroyWindow("GetFocus");
       }
 
       bool fromCenter = false;
