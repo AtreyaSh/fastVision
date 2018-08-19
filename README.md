@@ -42,7 +42,7 @@ The main test PDF file is `/dataC/test.pdf`. The corresponding image file used f
    
    Note: This step can be long and tedious
 
-## Run Application
+## Run Application on Host Machine
 
 Once the dependencies have been installed, we can run our application. 
 
