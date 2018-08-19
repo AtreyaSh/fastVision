@@ -102,11 +102,11 @@ Docker is a useful means of testing containerized applications. Here, we provide
 
 Tesseract OCR: https://github.com/tesseract-ocr/tesseract
 
+ROS.org Docker Wiki: http://wiki.ros.org/docker/Tutorials/GUI
+
 @xczhang in StackOverFlow discussion for input on openCV window hiding issue:
 https://stackoverflow.com/questions/8417531/opencv-how-to-force-the-image-window-to-appear-on-top-of-other-windows
 
 @schicking for openCV Dockerfile template: https://github.com/schickling/dockerfiles
 
 @pkdogcom for Dockerfile template: https://github.com/pkdogcom/opencv-docker
-
-ROS.org Docker Wiki: http://wiki.ros.org/docker/Tutorials/GUI
