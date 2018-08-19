@@ -34,7 +34,7 @@ The main test PDF file is `/dataC/test.pdf`. The corresponding image file used f
 
 4. In order to run the Tesseract OCR algorithm, we need to install `tesseract-ocr` and `libtesseract-dev`.
 
-   `$ sudo apt-get install tesseract-ocr libtesseract-dev`
+   `$ sudo apt-get install tesseract-ocr libtesseract-dev libleptonica-dev`
 
 5. In order to run ROI selection processes, we need to install `OpenCV` onto our system. A comprehensive guide can be found here:
 
