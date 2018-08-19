@@ -1,6 +1,5 @@
 FROM ubuntu:16.04
 LABEL maintainer="Atreya Shankar"
-
 ARG OPENCV_VERSION="3.3.1"
 
 # update packages and install basics
@@ -53,6 +52,5 @@ RUN rm -rf /tmp/*
 RUN apt-get install -y libcurl4-openssl-dev libmagick++-dev libleptonica-dev nano
 RUN R -e 'install.packages("pdftools"); install.packages("tesseract"); install.packages("png"); install.packages("magick")'
 RUN apt-get install -y libcanberra-gtk-module libcanberra-gtk3-module
-
 VOLUME ["/source"]
 CMD ["bash"]

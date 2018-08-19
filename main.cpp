@@ -24,6 +24,7 @@ int main (int argc, char **arv)
     if(j > 0){
       // redefine image and remove window problem
       rectangle(im, rects[j-1], Scalar(255,0,0), 1.5, 8, 0);
+      // fix for out of focus window problem
       namedWindow("GetFocus", CV_WINDOW_NORMAL);
       Mat img = cv::Mat::zeros(100, 100, CV_8UC3);
       imshow("GetFocus", img);
@@ -42,7 +43,8 @@ int main (int argc, char **arv)
 
     cvDestroyWindow("Image");
     input = "init";
-
+    
+    // user input phase
     while(input != "yes" & input != "no"){
       cout << "Do you want to select another ROI? (yes|no): ";
       cin >> input;

@@ -66,7 +66,7 @@ Once the dependencies have been installed, we can run our application.
 
    The optimized DPI will be saved as `/results/dpi.csv`.
 
-## Docker Implementation
+## Docker Implementation (Experimental)
 
 Docker is a useful means of testing containerized applications. Here, we provide this possibility of testing this application in a docker container.
 
@@ -88,13 +88,15 @@ Docker is a useful means of testing containerized applications. Here, we provide
 
    `$ docker run -ti --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix fastvision`
 
-6. Note that this is not a safe means of running the container with multiple users. This should be fine for single-users. Please check before changing `xhost` permissions. After running the container, remmeber to return `xhost` permissions back to its secure state.
+6. Note that this is not a secure means of running the container with multiple users. This should be fine for single-users. Please check before changing `xhost` permissions. After running the container, remember to return `xhost` permissions back to its secure state.
 
    `$ xhost -local:root`
 
 ## Developments
 
-Work on input and output ports for docker container
+1. Secure X11 service for Docker implementation
+
+2. Work on input and output ports for Docker container
 
 ## Credits
 
