@@ -94,7 +94,9 @@ Docker is a useful means of testing containerized applications. Here, we provide
 
 ## Developments
 
-Work on input and output ports for docker container
+1. Secure X11 service for Docker implementation
+
+2. Work on input and output ports for Docker container
 
 ## Credits
 
