@@ -66,7 +66,7 @@ Once the dependencies have been installed, we can run our application.
 
    The optimized DPI will be saved as `/results/dpi.csv`.
 
-## Docker Implementation
+## Docker Implementation (Experimental)
 
 Docker is a useful means of testing containerized applications. Here, we provide this possibility of testing this application in a docker container.
 
