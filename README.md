@@ -32,7 +32,7 @@ The main test PDF file is `/dataC/test.pdf`. The corresponding image file used f
 
    `$ sudo apt-get install imagemagick libpoppler-cpp-dev libcurl4-openssl-dev openjdk-8-jdk libmagick++-dev`
 
-4. In order to run the Tesseract OCR algorithm, we need to install `tesseract-ocr` and `libtesseract-dev`.
+4. In order to run the Tesseract OCR algorithm, we need to install the following:
 
    `$ sudo apt-get install tesseract-ocr libtesseract-dev libleptonica-dev`
 
