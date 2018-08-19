@@ -63,7 +63,7 @@ Once the dependencies have been installed, we can run our application.
    `$ Rscript src.R`
 
    While running this script, there could be additional dependencies required to install R packages. This would be shown directly in the console and clear instructions would be given on how to install the necessary corresponding aptitude packages.
-   
+
    The optimized DPI will be saved as `/results/dpi.csv`.
 
 ## Docker Implementation
@@ -74,13 +74,26 @@ Docker is a useful means of testing containerized applications. Here, we provide
 
 2. We need to install certain `X Server` dependencies on the host system:
 
-   `$ sudo apt-get install fxlrg xserver-xorg-core xserver-xorg xorg openbox`
+   `$ sudo apt-get install xserver-xorg-core xserver-xorg xorg openbox`
 
 3. Next, within this git repository, navigate to the `/docker` directory and build our docker image from source.
 
    `$ cd docker && docker build -t fastvision .`
 
    Note: This will be a long process with ~9 GB of data to be installed.
+
+4. After building the image, we would then need to run our docker image in a container. Since, we require GUI services within the container, we would need to tweak our container as below:
+
+   `$ xhost +local:root`
+
+   `$ docker run -ti --rm \
+      -e DISPLAY=$DISPLAY \
+      -v /tmp/.X11-unix:/tmp/.X11-unix \
+      fastvision`
+
+6. Note that this is not a safe means of running the container with multiple users. This should be fine for single-users. Please check before changing `xhost` permissions. After running the container, remmeber to return `xhost` permissions back to its secure state.
+
+   `$ xhost -local:root`
 
 ## Developments
 
@@ -94,3 +107,7 @@ Tesseract OCR: https://github.com/tesseract-ocr/tesseract
 https://stackoverflow.com/questions/8417531/opencv-how-to-force-the-image-window-to-appear-on-top-of-other-windows
 
 @schicking for openCV Dockerfile template: https://github.com/schickling/dockerfiles
+
+@pkdogcom for Dockerfile template: https://github.com/pkdogcom/opencv-docker
+
+ROS.org Docker Wiki: http://wiki.ros.org/docker/Tutorials/GUI
