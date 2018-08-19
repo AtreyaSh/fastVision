@@ -68,7 +68,23 @@ Once the dependencies have been installed, we can run our application.
 
 ## Docker Implementation
 
-[Under development...]
+Docker is a useful means of testing containerized applications. Here, we provide this possibility of testing this application in a docker container.
+
+1. To do this, firsty ensure `docker` is installed on your system. Clear instructions are given here: https://docs.docker.com/install/linux/docker-ce/ubuntu/
+
+2. We need to install certain `X Server` dependencies on the host system:
+
+   `$ sudo apt-get install fxlrg xserver-xorg-core xserver-xorg xorg openbox`
+
+3. Next, within this git repository, navigate to the `/docker` directory and build our docker image from source.
+
+   `$ cd docker && docker build -t fastvision .`
+
+   Note: This will be a long process with ~9 GB of data to be installed.
+
+## Developments
+
+Work on input and output ports for docker container
 
 ## Credits
 
