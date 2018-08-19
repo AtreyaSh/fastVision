@@ -107,6 +107,6 @@ ROS.org Docker Wiki: http://wiki.ros.org/docker/Tutorials/GUI
 @xczhang in StackOverFlow discussion for input on openCV window hiding issue:
 https://stackoverflow.com/questions/8417531/opencv-how-to-force-the-image-window-to-appear-on-top-of-other-windows
 
-@schicking for openCV Dockerfile template: https://github.com/schickling/dockerfiles
+@schickling for OpenCV Dockerfile template: https://github.com/schickling/dockerfiles
 
 @pkdogcom for Dockerfile template: https://github.com/pkdogcom/opencv-docker
