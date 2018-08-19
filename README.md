@@ -82,13 +82,13 @@ Docker is a useful means of testing containerized applications. Here, we provide
 
    Note: This will be a long process with ~9 GB of data to be installed.
 
-4. After building the image, we would then need to run our docker image in a container. Since, we require GUI services within the container, we would need to tweak our container as below:
+4. **Please note, this step is still experimental.** After building the image, we would then need to run our docker image in a container. Since, we require GUI services within the container, we would need to tweak our container as below:
 
    `$ xhost +local:root`
 
    `$ docker run -ti --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:rw atreyash/fastvision`
 
-6. Note that this is not a secure means of running the container with multiple users. This should be fine for single-users. Please check before changing `xhost` permissions. After running the container, remember to return `xhost` permissions back to its secure state.
+6. **Note that this is not a secure means of running the container with multiple users.** This should be fine for single-users. Please check before changing `xhost` permissions. After running the container, remember to return `xhost` permissions back to its secure state.
 
    `$ xhost -local:root`
 
