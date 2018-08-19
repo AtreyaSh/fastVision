@@ -88,7 +88,7 @@ Docker is a useful means of testing containerized applications. Here, we provide
 
    `$ docker run -ti --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix fastvision`
 
-6. Note that this is not a safe means of running the container with multiple users. This should be fine for single-users. Please check before changing `xhost` permissions. After running the container, remmeber to return `xhost` permissions back to its secure state.
+6. Note that this is not a secure means of running the container with multiple users. This should be fine for single-users. Please check before changing `xhost` permissions. After running the container, remmeber to return `xhost` permissions back to its secure state.
 
    `$ xhost -local:root`
 
