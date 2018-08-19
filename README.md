@@ -30,7 +30,7 @@ The main test PDF file is `/dataC/test.pdf`. The corresponding image file used f
 
 3. The following installations are necessary to run R-scripts:
 
-   `$ sudo apt-get install imagemagick libpoppler-cpp-dev libcurl4-openssl-dev`
+   `$ sudo apt-get install imagemagick libpoppler-cpp-dev libcurl4-openssl-dev openjdk-8-jdk`
 
 4. In order to run the Tesseract OCR algorithm, we need to install `tesseract-ocr` and `libtesseract-dev`.
 
