@@ -36,7 +36,7 @@ The main test PDF file is `/dataC/test.pdf`. The corresponding image file used f
 
    `$ sudo apt-get install tesseract-ocr libtesseract-dev`
 
-5. In order to run ROI selection processes, we need to install `openCV` onto our system. A comprehensive guide can be found here:
+5. In order to run ROI selection processes, we need to install `OpenCV` onto our system. A comprehensive guide can be found here:
 
    https://www.learnopencv.com/install-opencv3-on-ubuntu/
    
