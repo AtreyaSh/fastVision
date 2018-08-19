@@ -78,7 +78,7 @@ Docker is a useful means of testing containerized applications. Here, we provide
 
 3. Next, within this git repository, navigate to the `/docker` directory and build our docker image from source.
 
-   `$ cd docker && docker build -t fastvision .`
+   `$ cd docker && docker build -t atreyash/fastvision .`
 
    Note: This will be a long process with ~9 GB of data to be installed.
 
@@ -86,7 +86,7 @@ Docker is a useful means of testing containerized applications. Here, we provide
 
    `$ xhost +local:root`
 
-   `$ docker run -ti --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix fastvision`
+   `$ docker run -ti --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:rw atreyash/fastvision`
 
 6. Note that this is not a secure means of running the container with multiple users. This should be fine for single-users. Please check before changing `xhost` permissions. After running the container, remember to return `xhost` permissions back to its secure state.
 

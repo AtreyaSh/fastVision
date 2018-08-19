@@ -47,10 +47,10 @@ RUN ldconfig
 # prepare dir and install remaining dependencies
 RUN mkdir /source
 WORKDIR /source
-RUN git clone https://github.com/AtreyaSh/fastVision
 RUN rm -rf /tmp/*
 RUN apt-get install -y libcurl4-openssl-dev libmagick++-dev libleptonica-dev nano
 RUN R -e 'install.packages("pdftools"); install.packages("tesseract"); install.packages("png"); install.packages("magick")'
 RUN apt-get install -y libcanberra-gtk-module libcanberra-gtk3-module
+RUN git clone https://github.com/AtreyaSh/fastVision
 VOLUME ["/source"]
 CMD ["bash"]
