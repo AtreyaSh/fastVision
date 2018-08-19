@@ -28,11 +28,15 @@ The main test PDF file is `/dataC/test.pdf`. The corresponding image file used f
    
    `$ sudo apt-get update && sudo apt-get install r-base`
 
-3. In order to run the Tesseract OCR algorithm, we need to install `tesseract-ocr` and `libtesseract-dev`.
+3. The following installations are necessary to run R-scripts:
+
+   `$ sudo apt-get install imagemagick libpoppler-cpp-dev`
+
+4. In order to run the Tesseract OCR algorithm, we need to install `tesseract-ocr` and `libtesseract-dev`.
 
    `$ sudo apt-get install tesseract-ocr libtesseract-dev`
 
-4. In order to run ROI selection processes, we need to install `openCV` onto our system. A comprehensive guide can be found here:
+5. In order to run ROI selection processes, we need to install `openCV` onto our system. A comprehensive guide can be found here:
 
    https://www.learnopencv.com/install-opencv3-on-ubuntu/
    
@@ -72,3 +76,5 @@ Tesseract OCR: https://github.com/tesseract-ocr/tesseract
 
 @xczhang in StackOverFlow discussion for input on openCV window hiding issue:
 https://stackoverflow.com/questions/8417531/opencv-how-to-force-the-image-window-to-appear-on-top-of-other-windows
+
+@schicking for openCV Dockerfile template: https://github.com/schickling/dockerfiles
