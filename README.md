@@ -40,7 +40,7 @@ With the help of this repository, we will attempt to provide a solution for both
    
    Note: This step can be long and tedious
 
-## Run Application on Host Machine
+## Run Application
 
 Once the dependencies have been installed, we can run our application. 
 
