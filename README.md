@@ -64,7 +64,7 @@ The main test PDF file is `/dataC/test.pdf`. You can simply replace this PDF wit
 
    The optimized DPI will be saved as `/results/dpi.csv`.
 
-## Docker Implementation (Experimental)
+## Docker Implementation
 
 Docker is a useful means of testing containerized applications. Here, we provide this possibility of testing this application in a docker container.
 
