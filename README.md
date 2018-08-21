@@ -64,6 +64,10 @@ Once the dependencies have been installed, we can run our application.
 
    The optimized DPI will be saved as `/results/dpi.csv`.
 
+## Docker Implementation
+
+We offer a docker implementation of this application here: https://github.com/AtreyaSh/dockerOpenCVnR
+
 ## Credits
 
 Tesseract OCR: https://github.com/tesseract-ocr/tesseract
