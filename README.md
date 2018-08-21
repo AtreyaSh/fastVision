@@ -50,7 +50,7 @@ Once the dependencies have been installed, we can run our application.
    
    `$ cd fastVision`
 
-The main test PDF file is `/dataC/test.pdf`. You can simply replace this PDF with your own and rename it as `test.pdf`.
+   The main test PDF file is `/dataC/test.pdf`. You can simply replace this PDF with your own and rename it as `test.pdf`.
 
 2. Normally, we would need to compile our scripts and run them manually. Here, we provide a compact executable file `run.sh` to handle this process. Simply do as follows:
 
