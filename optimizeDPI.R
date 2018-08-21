@@ -42,9 +42,9 @@ optimizeDPI <- function(pdfPath, dimPath, dpiStart = 72, dpiInc = 10){
   
   ### iterations ###
   while(check == FALSE){
-    pdf_convert(pdfPath, filenames = "./dataR/next.png", dpi = dpi)
-    im <- image_read("./dataR/next.png")
-    png <- readPNG("./dataR/next.png")
+    pdf_convert(pdfPath, filenames = "./data/next.png", dpi = dpi)
+    im <- image_read("./data/next.png")
+    png <- readPNG("./data/next.png")
     x <- ncol(png)
     y <- nrow(png)
     dimTmp[,c(1,3)] <- dimR[,c(1,3)]*x
@@ -58,7 +58,7 @@ optimizeDPI <- function(pdfPath, dimPath, dpiStart = 72, dpiInc = 10){
     if(check == FALSE){
       against <- test
       dpi = dpi + dpiInc
-      file.remove("./dataR/next.png")
+      file.remove("./data/next.png")
     }
   }
  return(dpi)

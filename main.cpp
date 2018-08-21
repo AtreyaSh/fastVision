@@ -8,7 +8,7 @@ using namespace cv;
 int main (int argc, char **arv)
 {
   // define variables
-  Mat im = imread("./dataC/test.png");
+  Mat im = imread("./data/test.png");
   string input = "yes";
   vector<Rect2d> rects;
   vector<double> myV;
