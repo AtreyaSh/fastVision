@@ -82,7 +82,7 @@ Docker is a useful means of testing containerized applications. Here, we provide
 
 4. After building the image, we would then need to run our docker image in a container. Since, we require GUI services within the container, we would need to tweak our container as below. Here, we assume your working directory is the base directory `/fastVision`. 
 
-   `$ docker run -ti --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v $(pwd):/home/fastVision:rw atreyash/fastvision`
+   `$ docker run -ti --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v $(pwd):/home/fastVision:rw  atreyash/fastvision`
    
    Alternatively, if your base directory is elsewhere, please indicate the absolute path to `fastVision`.
    
