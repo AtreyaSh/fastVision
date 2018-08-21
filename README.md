@@ -10,8 +10,6 @@ To go about this process, we need to accomplish the following:
 
 With the help of this repository, we will attempt to provide a solution for both aforementioned tasks.
 
-The main test PDF file is `/dataC/test.pdf`. The corresponding image file used for ROI selection is `/dataC/test.png`.  You can replace these files with your own. Just ensure the names are the same, especially if you want a quick test without having to modify code. So far, our code has only been tested with `.png` image files, but feel free to experiment other formats.
-
 ## Guide for Ubuntu 16.04
 
 ## Dependencies
@@ -52,6 +50,8 @@ Once the dependencies have been installed, we can run our application.
    
    `$ cd fastVision`
 
+The main test PDF file is `/dataC/test.pdf`. You can simply replace this PDF with your own and rename it as `test.pdf`.
+
 2. Normally, we would need to compile our scripts and run them manually. Here, we provide a compact executable file `run.sh` to handle this process. Simply do as follows:
 
    `$ ./run.sh`
@@ -61,8 +61,6 @@ Once the dependencies have been installed, we can run our application.
 3. To optimize the DPI for the Tesseract OCR algorithm, run the following:
 
    `$ Rscript src.R`
-
-   While running this script, there could be additional dependencies required to install R packages. This would be shown directly in the console and clear instructions would be given on how to install the necessary corresponding aptitude packages.
 
    The optimized DPI will be saved as `/results/dpi.csv`.
 
@@ -78,19 +76,19 @@ Docker is a useful means of testing containerized applications. Here, we provide
 
 3. Next, within this git repository, navigate to the `/docker` directory and build our docker image from source.
 
-   `$ cd docker && docker build -t atreyash/fastvision .`
+   `$ cd docker && docker build -t atreyash/fastvision . && cd ..`
 
    Note: This will be a long process with ~9 GB of data to be installed.
 
-4. **Please note, this step is still experimental.** After building the image, we would then need to run our docker image in a container. Since, we require GUI services within the container, we would need to tweak our container as below:
+4. After building the image, we would then need to run our docker image in a container. Since, we require GUI services within the container, we would need to tweak our container as below. Here, we assume your working directory is the base directory `/fastVision`. 
 
-   `$ xhost +local:root`
+   `$ docker run -ti --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v $(pwd):/home/fastVision:rw atreyash/fastvision`
+   
+   Alternatively, if your base directory is elsewhere, please indicate the absolute path to `fastVision`.
+   
+   `$ docker run -ti --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v /path/to/fastVision:/home/fastVision:rw atreyash/fastvision`
 
-   `$ docker run -ti --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:rw atreyash/fastvision`
-
-6. **Note that this is not a secure means of running the container with multiple users.** This should be fine for single-users. Please check before changing `xhost` permissions. After running the container, remember to return `xhost` permissions back to its secure state.
-
-   `$ xhost -local:root`
+   This will run the container and mount the existing local `fastVision` directory into the container. The mounted directory has read and write permissions, meaning you can edit the files within your local machine and these will be reflected within the container. Similarly, after processing the image(s) in the container, the reflected changes will appear in your local machine.
 
 ## Developments
 
