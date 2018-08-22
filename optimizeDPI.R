@@ -35,7 +35,7 @@ optimizeDPI <- function(pdfPath, dimPath, dpiStart = 72, dpiInc = 10){
   
   ### define variables ###
   check <- FALSE
-  dpi = dpiStart
+  dpi <- dpiStart
   dimR <- read.csv(dimPath, stringsAsFactors = FALSE)[,c(3,4,1,2)]
   dimTmp <- dimR
   against <- lapply(1:nrow(dimR), function(x) randString(10))
