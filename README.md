@@ -16,23 +16,31 @@ With the help of this repository, we will attempt to provide a solution for both
 
 1. As our code requires c++ compilation, we would need a c++ compiler installed. In this example, we recommend `g++`.
 
-   `$ sudo apt-get install g++`
+   ```shell
+   $ sudo apt-get install g++
+   ```
    
 2. We require `R` to be installed on your system:
 
-   `$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9`
+   ```shell
+   $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
    
-   `$ sudo add-apt-repository 'deb [arch=amd64,i386] https://cran.rstudio.com/bin/linux/ubuntu xenial/'`
+   $ sudo add-apt-repository 'deb [arch=amd64,i386] https://cran.rstudio.com/bin/linux/ubuntu xenial/'
    
-   `$ sudo apt-get update && sudo apt-get install r-base`
+   $ sudo apt-get update && sudo apt-get install r-base
+   ```
 
 3. The following installations are necessary to run R-scripts:
 
-   `$ sudo apt-get install imagemagick libpoppler-cpp-dev libcurl4-openssl-dev openjdk-8-jdk libmagick++-dev`
+   ```shell
+   $ sudo apt-get install imagemagick libpoppler-cpp-dev libcurl4-openssl-dev openjdk-8-jdk libmagick++-dev
+   ```
 
 4. In order to run the Tesseract OCR algorithm, we need to install the following:
 
-   `$ sudo apt-get install tesseract-ocr libtesseract-dev libleptonica-dev`
+   ```shell
+   $ sudo apt-get install tesseract-ocr libtesseract-dev libleptonica-dev
+   ```
 
 5. In order to run ROI selection processes, we need to install `OpenCV` onto our system. A comprehensive guide can be found here:
 
@@ -46,21 +54,25 @@ Once the dependencies have been installed, we can run our application.
 
 1. Clone our repository and navigate to its main directory:
 
-   `$ git clone https://github.com/AtreyaSh/fastVision`
-   
-   `$ cd fastVision`
+   ```shell
+   $ git clone https://github.com/AtreyaSh/fastVision && cd fastVision
+   ```
 
    The main test PDF file is `/data/test.pdf`. You can simply replace this PDF with your own and rename it as `test.pdf`.
 
 2. Normally, we would need to compile our scripts and run them manually. Here, we provide a compact executable file `run.sh` to handle this process. Simply do as follows:
 
-   `$ ./run.sh`
+   ```shell
+   $ ./run.sh
+   ```
 
    This will allow you to analyze your image and select relevant ROIs. Selected ROIs with aspect-ratio invariant dimensions will be saved as `/results/results.csv`. 
 
 3. To optimize the DPI for the Tesseract OCR algorithm, run the following:
 
-   `$ Rscript src.R`
+   ```shell
+   $ Rscript src.R
+   ```
 
    The optimized DPI will be saved as `/results/dpi.csv`.
 
