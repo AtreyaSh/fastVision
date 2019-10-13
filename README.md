@@ -55,7 +55,7 @@ Once the dependencies have been installed, we can run our application.
 1. Clone our repository and navigate to its main directory:
 
    ```shell
-   $ git clone https://github.com/AtreyaSh/fastVision && cd fastVision
+   $ git clone https://github.com/atreyasha/fastVision && cd fastVision
    ```
 
    The main test PDF file is `/data/test.pdf`. You can simply replace this PDF with your own and rename it as `test.pdf`.
@@ -78,7 +78,7 @@ Once the dependencies have been installed, we can run our application.
 
 ## Docker Implementation
 
-We offer a docker implementation of this application here: https://github.com/AtreyaSh/dockerOpenCVnR
+We offer a docker implementation of this application here: https://github.com/atreyasha/dockerOpenCVnR
 
 ## Credits
 
